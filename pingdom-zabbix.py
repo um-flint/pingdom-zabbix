@@ -74,7 +74,7 @@ def zabbix_status(pingdom_data):
             '-z', config.get('ZABBIX', 'server'),
             '-p', config.get('ZABBIX', 'port'),
             '-s', config.get('ZABBIX', 'host'),
-            '-k', config.get('ZABBIX', 'key2') + '[' + str(check['name']) + ']',
+            '-k', '\'' + config.get('ZABBIX', 'key2') + '[' + str(check['name']) + ']\'',
             '-o', str(status)
         ]
         zabbix_trapper(cmd_args)
@@ -89,7 +89,7 @@ def zabbix_resptime(pingdom_data):
             '-z', config.get('ZABBIX', 'server'),
             '-p', config.get('ZABBIX', 'port'),
             '-s', config.get('ZABBIX', 'host'),
-            '-k', config.get('ZABBIX', 'key3') + '[' + str(check['name']) + ']',
+            '-k', '\'' + config.get('ZABBIX', 'key3') + '[' + str(check['name']) + ']\'',
             '-o', str(check['resptime'])
         ]
         zabbix_trapper(cmd_args)
