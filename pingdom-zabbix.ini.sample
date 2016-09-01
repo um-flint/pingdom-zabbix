@@ -1,0 +1,13 @@
+[PINGDOM]
+apiurl   = https://api.pingdom.com/api/2.0/checks
+appkey   = XXXXXXXX
+username = XXXXXXXX
+password = XXXXXXXX
+
+[ZABBIX]
+server   = zabbix.yourdomain.edu # your zabbix server
+port     = 10051 # port the zabbix trapper listens on
+host     = Pingdom # host to send the traps to
+key1     = pingdom.checks # discovery key
+key2     = pingdom.status # status key
+key3     = pingdom.resptime # response time key
