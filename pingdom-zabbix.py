@@ -21,7 +21,7 @@ config.read('pingdom-zabbix.ini')
 def zabbix_trapper(cmd_args):
     try:
         print ' '.join(cmd_args)
-        # print subprocess.check_output(cmd_args)
+        print subprocess.check_output(cmd_args)
     except subprocess.CalledProcessError as e:
         print "EXCEPTION"
         print "returncode:", e.returncode
